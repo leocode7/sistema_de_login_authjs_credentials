@@ -20,17 +20,16 @@ const Login = () => {
   const router = useRouter();
 
   if (state.success) {
-    router.replace('/dashboard')
+    //router.replace('/dashboard')
+    router.refresh()
   }
 
   return (
     <div className={styles.container}>
       <form className={styles.formulario} action={formAction}>
         {state.message && <p className={styles.error_message}>{state.message}</p>}
-        <label htmlFor="">Email</label>
-        <input name="email" type="email" placeholder="exemplo@exemplo.com" />
-        <label htmlFor="password">Senha</label>
-        <input name="password" type="password" placeholder="****" />
+        <input name="email" type="email" placeholder="Digite seu email" />
+        <input name="password" type="password" placeholder="Digite sua senha" />
         <button type="submit">Entrar</button>
       </form>
     </div>
