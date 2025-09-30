@@ -13,7 +13,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         },
       },
       authorize: async (credentials) => {
-        if (credentials?.email === "exe@exe.com" && credentials?.password === "101010") {
+        if (credentials?.email === "teste@teste.com" && credentials?.password === "101010") {
           return {
             id: "dndejnjds87873",
             name: "Leonardo",
