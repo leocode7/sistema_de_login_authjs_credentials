@@ -4,6 +4,7 @@ import { useActionState, useEffect } from "react";
 import styles from "./Login.module.css"
 import { loginAction } from "./loginAction";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export type FormState = {
   success: boolean;
@@ -27,6 +28,7 @@ const Login = () => {
   return (
     <div className={styles.container}>
       <form className={styles.formulario} action={formAction}>
+        <Image className={styles.avatar} src='/avatar.svg' alt="Avatar profile" width={84} height={84} priority={true}/>
         {state.message && <p className={styles.error_message}>{state.message}</p>}
         <input name="email" type="email" placeholder="Digite seu email" />
         <input name="password" type="password" placeholder="Digite sua senha" />

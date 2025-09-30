@@ -19,11 +19,29 @@
   width: 95vw;
   margin-top: 50%;
   border-radius: 8px;
+
+  position: relative;
+}
+
+.avatar {
+  position: absolute;
+  top: -88px;
+
+  /*
+  **** O "left: 50%;" posiciona a borda esquerda do elemento no meio do seu container;
+  **** O "transform: translateX(-50%);" puxa o elemento para a esquerda em 50% da sua própria largura.
+  */
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .error_message {
   color: rgb(255, 5, 5);
   font-size: 1.5rem;
+  text-align: center;
+  background-color: rgba(252, 6, 6, 0.171);
+  padding: 5px;
+  border-radius: 8px;
 }
 
 .formulario input {
